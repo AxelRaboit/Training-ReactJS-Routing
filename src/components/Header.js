@@ -4,7 +4,10 @@ import Home from './navigation/Home'
 import About from './navigation/About'
 import Profile from './navigation/Profile'
 import Projects from './navigation/Projects'
-import {Routes, Route, Link} from 'react-router-dom'
+import Services from './navigation/Services/Services'
+import Marketing from './navigation/Services/Marketing/Marketing'
+import Development from './navigation/Services/Development/Development'
+import { Routes, Route, Link } from 'react-router-dom'
 
 const Nav = styled.nav`
     display: flex;
@@ -53,12 +56,17 @@ const Header = () => {
                 <NavRightPart>
                     <StyledLink to='/'>Accueil</StyledLink>
                     <StyledLink to='/projects'>Projets</StyledLink>
+                    <StyledLink to='/services'>Services</StyledLink>
                     <StyledLink to='/about'>À propos</StyledLink>
                     <StyledLink to='/profile/:id'>Profil</StyledLink>
                 </NavRightPart>
             </Nav>
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/services' element={<Services />}>
+                    <Route path='/services/marketing' element={<Marketing />} />
+                    <Route path='/services/development' element={<Development />} />
+                </Route>
                 <Route path='/projects' element={<Projects />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/profile/:id' element={<Profile />} />
