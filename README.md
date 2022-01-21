@@ -24,13 +24,13 @@ import {Routes, Route, Link} from 'react-router-dom'
 <Fragment>
     <Nav>
         <NavLeftPart>
-            <StyledLogo to='/'>Logo</StyledLogo>
+            <Link to='/'>Logo</Link>
         </NavLeftPart>
         <NavRightPart>
-            <StyledLink to='/'>Accueil</StyledLink>
-            <StyledLink to='/projects'>Projets</StyledLink>
-            <StyledLink to='/about'>À propos</StyledLink>
-            <StyledLink to='/profile/:id'>Profil</StyledLink>
+            <Link to='/'>Accueil</Link>
+            <Link to='/projects'>Projets</Link>
+            <Link to='/about'>À propos</Link>
+            <Link to='/profile/:id'>Profil</Link>
         </NavRightPart>
     </Nav>
     <Routes>
